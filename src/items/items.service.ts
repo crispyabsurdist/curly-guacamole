@@ -9,28 +9,28 @@ import { Items } from "./items.interface";
  * In-Memory Store
  */
 
-let items: Items = {
+ let items: Items = {
   1: {
     id: 1,
-    name: "Fäbojänsk Falukorv",
+    name: "Burger",
     price: 599,
-    description: "Falukorv marinerad i svensk hederlig bakteriekultur",
-    image: "https://bit.ly/3JqK2cb",
+    description: "Tasty",
+    image: "https://cdn.auth0.com/blog/whatabyte/burger-sm.png"
   },
   2: {
     id: 2,
-    name: " Palmes Paté",
+    name: "Pizza",
     price: 299,
-    description: "Mosig och spontan",
-    image: "https://bit.ly/3LmVLKK",
+    description: "Cheesy",
+    image: "https://cdn.auth0.com/blog/whatabyte/pizza-sm.png"
   },
   3: {
     id: 3,
-    name: "Bakluckevarm öl",
+    name: "Tea",
     price: 199,
-    description: "Besk och alltid en besvikelse",
-    image: "https://bit.ly/3LuwEpp",
-  },
+    description: "Informative",
+    image: "https://cdn.auth0.com/blog/whatabyte/tea-sm.png"
+  }
 };
 
 /**

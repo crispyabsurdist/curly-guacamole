@@ -11,7 +11,6 @@ import { BaseItem, Item } from "./item.interface";
  */
 
 export const itemsRouter = express.Router();
-
 /**
  * Controller Definitions
  */
@@ -21,9 +20,10 @@ export const itemsRouter = express.Router();
 itemsRouter.get("/", async (req: Request, res: Response) => {
   try {
     const items: Item[] = await ItemService.findAll();
+
     res.status(200).send(items);
-  } catch (error) {
-    res.status(500).send(error.message);
+  } catch (e) {
+    res.status(500).send(e.message);
   }
 });
 
@@ -40,8 +40,8 @@ itemsRouter.get("/:id", async (req: Request, res: Response) => {
     }
 
     res.status(404).send("item not found");
-  } catch (error) {
-    res.status(500).send(error.message);
+  } catch (e) {
+    res.status(500).send(e.message);
   }
 });
 
@@ -54,8 +54,8 @@ itemsRouter.post("/", async (req: Request, res: Response) => {
     const newItem = await ItemService.create(item);
 
     res.status(201).json(newItem);
-  } catch (error) {
-    res.status(500).send(error.message);
+  } catch (e) {
+    res.status(500).send(e.message);
   }
 });
 
@@ -77,8 +77,8 @@ itemsRouter.put("/:id", async (req: Request, res: Response) => {
     const newItem = await ItemService.create(itemUpdate);
 
     res.status(201).json(newItem);
-  } catch (error) {
-    res.status(500).send(error.message);
+  } catch (e) {
+    res.status(500).send(e.message);
   }
 });
 
@@ -90,7 +90,7 @@ itemsRouter.delete("/:id", async (req: Request, res: Response) => {
     await ItemService.remove(id);
 
     res.sendStatus(204);
-  } catch (error) {
-    res.status(500).send(error.message);
+  } catch (e) {
+    res.status(500).send(e.message);
   }
 });
