@@ -26,7 +26,7 @@ let items: Items = {
   },
   3: {
     id: 3,
-    name: "Schymans piss",
+    name: "Bakluckevarm öl",
     price: 199,
     description: "Besk och alltid en besvikelse",
     image: "https://bit.ly/3LuwEpp",
